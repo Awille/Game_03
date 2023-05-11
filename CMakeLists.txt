@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(E:/eigen/eigen-3.4.0)
 
-add_executable(Game_03 main.cpp rasterizer.hpp rasterizer.cpp global.hpp Triangle.hpp Triangle.cpp Texture.hpp Texture.cpp Shader.hpp OBJ_Loader.h)
+add_executable(Game_03 main.cpp rasterizer.hpp rasterizer.cpp global.hpp Triangle.hpp Triangle.cpp Texture.hpp Texture.cpp Shader.hpp OBJ_Loader.h bezier.cpp)
 # 设置 OpenCV 安装路径
 set(OpenCV_DIR "E:/opencv/opencv/mingw_build")  # 指向 OpenCV 安装目录下的 build/install 文件夹
 

@@ -9,6 +9,7 @@
 #include "OBJ_Loader.h"
 #include "Eigen/Core"
 #include "Eigen/Dense"
+#include "chrono"
 
 float degree2Rapid(float angle) {
     return angle * (MY_PI / 180.0f);
@@ -411,6 +412,7 @@ Eigen::Vector3f bump_fragment_shader(const fragment_shader_payload& payload)
     return result_color * 255.f;
 }
 
+/*
 int main(int argc, const char** argv)
 {
     std::vector<Triangle*> TriangleList;
@@ -444,9 +446,9 @@ int main(int argc, const char** argv)
     auto texture_path = "hmap.jpg";
     r.set_texture(Texture(obj_path + texture_path));
 
-    std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = texture_fragment_shader;
-    texture_path = "spot_texture.png";
-    r.set_texture(Texture(obj_path + texture_path));
+    std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = bump_fragment_shader;
+//    texture_path = "spot_texture.png";
+//    r.set_texture(Texture(obj_path + texture_path));
 
     if (argc >= 2)
     {
@@ -536,4 +538,4 @@ int main(int argc, const char** argv)
 
     }
     return 0;
-}
+}*/
